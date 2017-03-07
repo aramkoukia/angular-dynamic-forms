@@ -1,7 +1,14 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
+import { Question } from '../models';
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+    selector: 'dynamic-form-app',
+    template: require('./app.component.html')
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent {
+    questions: Array<Question>;
+
+    constructor() {
+        this.questions = [];
+    }
+}

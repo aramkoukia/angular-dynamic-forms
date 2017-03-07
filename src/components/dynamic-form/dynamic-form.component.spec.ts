@@ -1,7 +1,7 @@
 ﻿import { TestBed } from '@angular/core/testing';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './dynamic-form.component';
-import { DynamicQuestionComponent } from '../../components/dynamic-question/dynamic-question.component'; 
+import { DynamicQuestionComponent } from '../dynamic-question/dynamic-question.component'; 
 
 describe('Component: DynamicFormComponent', () => {
     let component: DynamicFormComponent;
@@ -31,13 +31,15 @@ describe('Component: DynamicFormComponent', () => {
                 controlType: 'text',
                 id: 'first',
                 label: 'My First',
-                required: false
+                required: false,
+                options: null
             },
             {
                 controlType: 'text',
                 id: 'second',
                 label: 'Second!',
-                required: true
+                required: true,
+                options: null
             }
         ];
         component.ngOnInit();
@@ -53,13 +55,15 @@ describe('Component: DynamicFormComponent', () => {
                 controlType: 'text',
                 id: 'first',
                 label: 'My First',
-                required: false
+                required: false,
+                options: null
             },
             {
                 controlType: 'text',
                 id: 'second',
                 label: 'Second!',
-                required: true
+                required: true,
+                options: null
             }
         ];
         component.ngOnInit();

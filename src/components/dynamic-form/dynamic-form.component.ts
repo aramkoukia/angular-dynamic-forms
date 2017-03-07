@@ -11,6 +11,7 @@ export class DynamicFormComponent implements OnInit {
     @Input() questions: Array<Question>;
 
     formGroup: FormGroup;
+    payload: string
 
     ngOnInit() {
 
@@ -39,7 +40,7 @@ export class DynamicFormComponent implements OnInit {
     }
 
     submit() {
-        //this.payload = JSON.stringify(this.formGroup.value);
+        this.payload = JSON.stringify(this.formGroup.value);
     }
 
 }
