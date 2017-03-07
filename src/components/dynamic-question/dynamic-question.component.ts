@@ -10,8 +10,14 @@ import { Question } from '../../models';
 export class DynamicQuestionComponent {
     @Input() form: FormGroup;
     @Input() question: Question;
+    payload: string
 
     get isValid(): boolean {
         return this.form.controls[this.question.id].valid;
     }
+
+    submit() {
+        this.payload = JSON.stringify(this.form.value);
+    }
+
 }

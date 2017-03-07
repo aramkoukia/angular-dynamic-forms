@@ -39,7 +39,7 @@ export class DynamicFormComponent implements OnInit {
     }
 
     submit() {
-        this.payload = JSON.stringify(this.formGroup.value);
+        //this.payload = JSON.stringify(this.formGroup.value);
     }
 
 }
