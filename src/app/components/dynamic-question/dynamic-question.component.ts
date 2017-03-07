@@ -1,6 +1,6 @@
 ﻿import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Question } from './../../../models';
+import { Question } from './../../models/index';
 
 @Component({
     selector: 'dynamic-question',

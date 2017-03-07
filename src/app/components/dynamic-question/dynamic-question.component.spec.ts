@@ -1,7 +1,7 @@
 ﻿import { TestBed } from '@angular/core/testing';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Question } from './../../../models';
 import { DynamicQuestionComponent } from './dynamic-question.component';
+import { Question } from './../../models';
 
 describe('Component: DynamicQuestionComponent', () => {
     let component: DynamicQuestionComponent;
