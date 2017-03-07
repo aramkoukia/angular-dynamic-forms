@@ -1,10 +1,10 @@
 ﻿import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Question } from '../../models';
+import { Question } from './../../../models';
 
 @Component({
     selector: 'dynamic-question',
-    template: require('./dynamic-question.component.html')
+    templateUrl: './app/components/dynamic-question/dynamic-question.component.html'
 })
 
 export class DynamicQuestionComponent {
