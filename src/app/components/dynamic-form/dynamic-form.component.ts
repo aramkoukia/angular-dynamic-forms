@@ -10,6 +10,7 @@ import { DynamicFormService } from './../../services/dynamic-form.service';
 export class DynamicFormComponent implements OnInit {
 
     @Input() questions: Array<Question>;
+    errorMessage: string;
     formGroup: FormGroup;
     payload: string
 
@@ -19,13 +20,11 @@ export class DynamicFormComponent implements OnInit {
 
     ngOnInit() {
 
-        let observable = this.dynamicFormService.GetFormTemplate('template1');
-
-        observable.subscribe(data => function() { 
-                            console.log(data), 
-                            this.questions = data },
-                    err => console.log(err),
-                    () => console.log('Completed'));
+        this.dynamicFormService.GetFormTemplate()
+                        .subscribe(
+                            questions => this.questions = questions,
+                            error =>  this.errorMessage = <any>error);
+                            
 
         this.formGroup = this.generateForm(this.questions);
 
