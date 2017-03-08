@@ -19,7 +19,13 @@ export class DynamicFormComponent implements OnInit {
 
     ngOnInit() {
 
-        this.questions = this.dynamicFormService.GetFormTemplate('template1');
+        let observable = this.dynamicFormService.GetFormTemplate('template1');
+
+        observable.subscribe(data => function() { 
+                            console.log(data), 
+                            this.questions = data },
+                    err => console.log(err),
+                    () => console.log('Completed'));
 
         this.formGroup = this.generateForm(this.questions);
 
