@@ -1,6 +1,7 @@
 ﻿import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Question } from './../../models';
+import { DynamicFormService } from './../../services/dynamic-form.service';
 
 @Component({
     selector: 'dynamic-form',
@@ -12,37 +13,13 @@ export class DynamicFormComponent implements OnInit {
     formGroup: FormGroup;
     payload: string
 
+    constructor(private dynamicFormService: DynamicFormService) {
+
+    }
+
     ngOnInit() {
 
-        this.questions = [
-            {
-                controlType: 'text-input',
-                id: 'asdasd',
-                label: 'My First',
-                required: false,
-                options: null,
-                type: 'text',
-                value: 'test'
-            },
-            {
-                controlType: 'textarea',
-                id: 'first',
-                label: 'My First',
-                required: false,
-                options: null,
-                type: 'text',
-                value: 'test'
-            },
-            {
-                controlType: 'text',
-                id: 'second',
-                label: 'Second!',
-                required: true,
-                options: null,
-                type: 'text',
-                value: 'test'
-            }
-        ];
+        this.questions = this.dynamicFormService.GetFormTemplate('template1');
 
         this.formGroup = this.generateForm(this.questions);
 
