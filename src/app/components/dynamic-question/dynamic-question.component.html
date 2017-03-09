@@ -22,6 +22,12 @@
     </span>
   </div>
 
+  <audio controls class="control" *ngSwitchCase="'audio'" [formControlName]="question.id" ngDefaultControl>
+    <source src="app/audio/blues_guitar.wav" type="audio/ogg">
+    <source src="app/audio/blues_guitar.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="error" *ngIf="!isValid">
     This question is required!
   </div>

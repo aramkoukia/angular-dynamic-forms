@@ -25,5 +25,15 @@
     "options": [],
     "type": "text",
     "value": "second text"
+  },
+  {
+    "controlType": "audio",
+    "id": "audioid",
+    "label": "audio",
+    "required": false,
+    "options": [],
+    "type": "text",
+    "value": "audio/blues_guitar.wav"
   }
+
 ]
