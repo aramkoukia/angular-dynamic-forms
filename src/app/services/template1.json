@@ -4,7 +4,7 @@
     "id": "asdasd",
     "label": "My First",
     "required": false,
-    "options": null,
+    "options": [],
     "type": "text",
     "value": "test"
   },
@@ -13,7 +13,7 @@
     "id": "first",
     "label": "My First",
     "required": false,
-    "options": null,
+    "options": [],
     "type": "text",
     "value": "test"
   },
@@ -22,7 +22,7 @@
     "id": "second",
     "label": "Second!",
     "required": true,
-    "options": null,
+    "options": [],
     "type": "text",
     "value": "test"
   }
