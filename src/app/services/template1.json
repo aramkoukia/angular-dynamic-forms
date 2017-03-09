@@ -2,28 +2,28 @@
   {
     "controlType": "text-input",
     "id": "asdasd",
-    "label": "My First",
+    "label": "My First box",
     "required": false,
     "options": [],
     "type": "text",
-    "value": "test"
+    "value": "first text"
   },
   {
     "controlType": "textarea",
     "id": "first",
-    "label": "My First",
+    "label": "My text area",
     "required": false,
     "options": [],
     "type": "text",
-    "value": "test"
+    "value": "text area value"
   },
   {
-    "controlType": "text",
+    "controlType": "text-input",
     "id": "second",
-    "label": "Second!",
+    "label": "third text box",
     "required": true,
     "options": [],
     "type": "text",
-    "value": "test"
+    "value": "second text"
   }
 ]
