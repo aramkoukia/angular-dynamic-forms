@@ -20,36 +20,6 @@ export class DynamicFormService {
                         .map(this.extractData)
                         .catch(this.handleError);
 
-        // return [
-        //    {
-        //        "controlType": "text-input",
-        //        "id": "asdasd",
-        //        "label": "My First",
-        //        "required": false,
-        //        "options": null,
-        //        "type": "text",
-        //        "value": "test"
-        //    },
-        //    {
-        //        "controlType": "textarea",
-        //        "id": "first",
-        //        "label": "My First",
-        //        "required": false,
-        //        "options": null,
-        //        "type": "text",
-        //        "value": "test"
-        //    },
-        //    {
-        //        "controlType": "text",
-        //        "id": "second",
-        //        "label": "Second!",
-        //        "required": true,
-        //        "options": null,
-        //        "type": "text",
-        //        "value": "test"
-        //    }
-        // ];
-
     }
 
     private extractData(res: Response) {
