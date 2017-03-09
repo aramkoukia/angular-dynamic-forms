@@ -12,7 +12,7 @@ export class DynamicQuestionComponent {
     @Input() question: Question;
 
     get isValid(): boolean {
-        return this.form.controls[this.question.id].valid;
+        return true;//this.form.controls[this.question.id].valid;
     }
 
 }

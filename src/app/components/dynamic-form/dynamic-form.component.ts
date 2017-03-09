@@ -18,17 +18,19 @@ export class DynamicFormComponent implements OnInit {
 
     constructor(private dynamicFormService: DynamicFormService) {
 
-        this.dynamicFormService.GetFormTemplate()
-                        .subscribe(
-                            questions => this.questions = questions,
-                            error =>  this.errorMessage = <any>error);
                             
     }
 
     ngOnInit() {
 
-        this.formGroup = this.generateForm(this.questions);
-
+        this.dynamicFormService.GetFormTemplate()
+            //.subscribe(
+            //     questions => this.questions = questions,
+            //     error =>  this.errorMessage = <any>error);
+            .subscribe((data) => {
+                this.questions = data;
+                this.formGroup = this.generateForm(this.questions);
+            });
     }
 
     private generateForm(questions: Array<Question>): FormGroup {
