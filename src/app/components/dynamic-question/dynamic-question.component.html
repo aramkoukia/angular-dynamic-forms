@@ -1,8 +1,13 @@
 ﻿<div class="question" [formGroup]="form" [ngSwitch]="question.controlType">
+  
+  <br />
+
   <label [attr.for]="question.id">{{ question.label }}</label>
 
   <input class="control" [id]="question.id" [type]="question.type"
          *ngSwitchCase="'text-input'" [formControlName]="question.id">
+
+  <br />
 
   <select class="control" [id]="question.id"
           *ngSwitchCase="'select'" [formControlName]="question.id">
@@ -11,8 +16,12 @@
     </option>
   </select>
 
+  <br />
+
   <textarea class="control" [id]="question.id"
             *ngSwitchCase="'textarea'" [formControlName]="question.id"></textarea>
+
+  <br />
 
   <div class="radio-group" *ngSwitchCase="'radio'">
     <span class="radio" *ngFor="let answer of question.options">
@@ -21,12 +30,18 @@
       <label [attr.for]="question.id + answer.value">{{ answer.label }}</label>
     </span>
   </div>
+  <br />
+
+  <input *ngSwitchCase="'range'" [id]="question.id" [type]="question.type" [formControlName]="question.id" id="points" min="0" max="100">
+
+  <br />
 
   <audio controls class="control" *ngSwitchCase="'audio'" [formControlName]="question.id" ngDefaultControl>
     <source src="app/audio/blues_guitar.wav" type="audio/ogg">
     <source src="app/audio/blues_guitar.wav" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+
 
   <div class="error" *ngIf="!isValid">
     This question is required!

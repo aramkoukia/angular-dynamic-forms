@@ -18,6 +18,15 @@
     "value": "text area value"
   },
   {
+    "controlType": "textarea",
+    "id": "firs1t",
+    "label": "Mydfg",
+    "required": false,
+    "options": [],
+    "type": "text",
+    "value": "text area value"
+  },
+  {
     "controlType": "text-input",
     "id": "second",
     "label": "third text box",
@@ -27,13 +36,30 @@
     "value": "second text"
   },
   {
+    "controlType": "range",
+    "id": "range",
+    "label": "slider control",
+    "required": false,
+    "options": [],
+    "type": "range",
+    "value": "10"
+  },
+  {
+    "controlType": "range",
+    "id": "range1",
+    "label": "slider control",
+    "required": false,
+    "options": [],
+    "type": "range",
+    "value": "20"
+  },
+  {
     "controlType": "audio",
     "id": "audioid",
     "label": "audio",
     "required": false,
     "options": [],
-    "type": "text",
+    "type": "audio",
     "value": "audio/blues_guitar.wav"
   }
-
 ]
