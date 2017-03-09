@@ -23,10 +23,7 @@ export class DynamicFormComponent implements OnInit {
 
     ngOnInit() {
 
-        this.dynamicFormService.GetFormTemplate()
-            //.subscribe(
-            //     questions => this.questions = questions,
-            //     error =>  this.errorMessage = <any>error);
+        this.dynamicFormService.GetFormTemplate('template1')
             .subscribe((data) => {
                 this.questions = data;
                 this.formGroup = this.generateForm(this.questions);

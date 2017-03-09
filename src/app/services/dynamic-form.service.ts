@@ -13,13 +13,10 @@ export class DynamicFormService {
     constructor(private http: Http) {
     }
 
-    GetFormTemplate(/*templateName: string*/) : Observable<Question[]> {
-        //TODO: fix the error here: this.result is undefined...
-
-            return this.http.get('./app/services/template1.json')
+    GetFormTemplate(templateName: string) : Observable<Question[]> {
+        return this.http.get('./app/services/' + templateName +'.json')
                         .map(this.extractData)
                         .catch(this.handleError);
-
     }
 
     private extractData(res: Response) {
